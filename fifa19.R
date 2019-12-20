@@ -131,14 +131,14 @@ summary(model.0)
 #Az eredmény multiplikatív és nem additív  mert:E[y|z,x+1]=exp(α+β⋅(x+1)+γ⋅z)=exp(α+β⋅x+β+γ⋅z)=exp(α+β⋅x+γ⋅z)⋅exp(β)=E[y|z,x]⋅exp(β)      #
 exp(coef(model.0))
 
-#Tehát míg az erőnlétkomponens körülbelül egységi varianciája  növeli a játékos értékét, a csapatjátéké.
+#Tehát míg az erőnlétkomponens körülbelül egységi varianciája  növeli a játékos értékét, a csapatjátéké csökkenti azt.
 # Lehetséges ok: azok akik inkáb csapatjátékra összpontosítanak ott az egyéni teljesítmény kevésbé hangsúlyos
 # és ez befolyásolhatja a játékos értékét. Persze ez csak feltételezés, további kutatások célja lehet vizsgálni a jelenséget.
 ered <- predict(model.0, type="response")
 cor(ered, fifafield[,"ertek"])^2
 #Tehát a két teljesítmény komponens 53% információt magyaráz a játékos értékével kapcsolatban.
                                                
-#a modellt kiegészítem a korváltozóval
+#a modellt kiegészítem a kor változóval
 
 cor(fifafield[,"Age"],fifafield["eronletcomp"])
 cor(fifafield[,"Age"],fifafield[,"csapatjatekcomp"])
