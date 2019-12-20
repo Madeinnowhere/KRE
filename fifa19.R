@@ -233,6 +233,6 @@ TukeyHSD(anova2)
 
 #amint látjuk  legfiatalabb játékosokcsoportbak minden esetben szignifikánsan alacsonyabb a bére és értéke. 
 # a többi korosztály közöttt pedig nincs egyértelmű linearitás. 
-# Tehát a kor hatását a modellben nem érdemes lineárisnak tekinteni
+# Tehát a kor hatását a modelben nem érdemes lineárisnak tekinteni
 
 
