@@ -4,7 +4,7 @@
 
 #Beolvasom a file-t
 
-fifa <- read.csv("C:/Users/Isti/Downloads/fifa19/data.csv",
+fifa <- read.csv("https://raw.githubusercontent.com/RIstvn/KRE/master/data.csv",
                   check.names=FALSE, header = TRUE, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
 colnames(fifa)
 str(fifa)
@@ -53,6 +53,7 @@ lapply(perform,sd)
 
 par(mfrow=c(5,2))
 lapply(perform,hist)
+
 par(mfrow=c(1,1))
 #korreláció
 cor(perform)
