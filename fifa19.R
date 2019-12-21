@@ -131,14 +131,14 @@ summary(model.0)
 #Az eredmény multiplikatív és nem additív  mert:E[y|z,x+1]=exp(α+β⋅(x+1)+γ⋅z)=exp(α+β⋅x+β+γ⋅z)=exp(α+β⋅x+γ⋅z)⋅exp(β)=E[y|z,x]⋅exp(β)      #
 exp(coef(model.0))
 
-#Tehát míg az erőnlétkomponens körülbelül egységi varianciája  növeli a játékos értékét, a csapatjátéké csökkenti azt.
+#Tehát míg az erőnlétkomponens körülbelül egységi varianciája  növeli a játékos értékét, a csapatjátéké csökenti azt.
 # Lehetséges ok: azok akik inkáb csapatjátékra összpontosítanak ott az egyéni teljesítmény kevésbé hangsúlyos
 # és ez befolyásolhatja a játékos értékét. Persze ez csak feltételezés, további kutatások célja lehet vizsgálni a jelenséget.
 ered <- predict(model.0, type="response")
 cor(ered, fifafield[,"ertek"])^2
 #Tehát a két teljesítmény komponens 53% információt magyaráz a játékos értékével kapcsolatban.
                                                
-#a modellt kiegészítem a kor változóval
+#a modellt kiegészítem a korváltozóval
 
 cor(fifafield[,"Age"],fifafield["eronletcomp"])
 cor(fifafield[,"Age"],fifafield[,"csapatjatekcomp"])
@@ -233,6 +233,6 @@ TukeyHSD(anova2)
 
 #amint látjuk  legfiatalabb játékosokcsoportbak minden esetben szignifikánsan alacsonyabb a bére és értéke. 
 # a többi korosztály közöttt pedig nincs egyértelmű linearitás. 
-# Tehát a kor hatását a modelben nem érdemes lineárisnak tekinteni
+# Tehát a kor hatását a modellben nem érdemes lineárisnak tekinteni
 
 
